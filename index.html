@@ -1,6 +1,187 @@
-    <!-- БАЙЖАНОВА: 1-БӨЛІМ -->
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Жалпы педагогика — тест</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f4f6fb;
+      color: #182033;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #263b72, #5267b8);
+      color: white;
+      padding: 28px 18px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 8px; font-size: 28px; }
+    header p { margin: 0; opacity: .92; }
+    .wrap {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 18px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin: 10px 0 24px;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      min-height: 72px;
+      padding: 14px;
+      background: #fff;
+      border: 1px solid #dfe5f5;
+      border-radius: 16px;
+      text-decoration: none;
+      color: #1c2b54;
+      box-shadow: 0 6px 18px rgba(25, 35, 70, .06);
+      font-weight: 650;
+    }
+    .card:hover { transform: translateY(-1px); }
+    .section {
+      background: #fff;
+      border: 1px solid #dfe5f5;
+      border-radius: 20px;
+      padding: 18px;
+      margin: 18px 0;
+      box-shadow: 0 8px 24px rgba(25, 35, 70, .07);
+    }
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 23px;
+      color: #20376f;
+    }
+    .meta, .terms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0;
+    }
+    .tag {
+      background: #eef2ff;
+      color: #263b72;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .term {
+      background: #f7f8fc;
+      border: 1px solid #e5e9f5;
+      padding: 6px 10px;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+    .theory {
+      background: #f8fbff;
+      border-left: 4px solid #5267b8;
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin: 14px 0;
+    }
+    .question {
+      border-top: 1px solid #edf0f7;
+      padding: 16px 0;
+    }
+    .question p {
+      margin: 0 0 10px;
+      font-weight: 700;
+      color: #1b294d;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+      padding: 10px 12px;
+      border: 1px solid #e2e7f3;
+      border-radius: 12px;
+      background: #fff;
+      cursor: pointer;
+    }
+    input { margin-right: 8px; }
+    label.correct {
+      border-color: #1f9d55;
+      background: #eaf8f0;
+      color: #13683a;
+      font-weight: 650;
+    }
+    label.wrong {
+      border-color: #d64545;
+      background: #fff0f0;
+      color: #962525;
+    }
+    .explain {
+      display: none;
+      background: #fff8e6;
+      border: 1px solid #f1d58a;
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin-top: 10px;
+    }
+    button {
+      border: none;
+      background: #263b72;
+      color: white;
+      padding: 11px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .result {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+      background: #eef2ff;
+      border-radius: 12px;
+      font-weight: 700;
+      color: #20376f;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 22px; }
+      .wrap { padding: 12px; }
+      .section { padding: 14px; }
+      .section h2 { font-size: 20px; }
+      label { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Жалпы педагогика</h1>
+    <p>З. Байжанова бойынша бөлімдік тест</p>
+  </header>
 
-    <section class="section" data-section="b1">
+  <main class="wrap">
+    <nav class="cards">
+        <a class="card" href="#b1"><span>1-бөлім. Педагогиканың жалпы негіздері</span></a>
+        <a class="card" href="#b2"><span>2-бөлім. Педагогика ғылымы мен практикасының даму тарихы</span></a>
+        <a class="card" href="#b3"><span>3-бөлім. Ұлттық педагогикалық ойлардың дамуы</span></a>
+        <a class="card" href="#b4"><span>4-бөлім. Педагогика әдіснамасы және зерттеу әдістері</span></a>
+        <a class="card" href="#b5"><span>5-бөлім. Педагогикалық әдіснаманың философиялық негіздері</span></a>
+        <a class="card" href="#b6"><span>6-бөлім. Тұлғаның дамуына әсер ететін факторлар және жас кезең ерекшеліктері</span></a>
+        <a class="card" href="#b7"><span>7-бөлім. Әлеуметтік тәжірибені меңгеру және әлеуметтену</span></a>
+        <a class="card" href="#b8"><span>8-бөлім. Тәрбие мақсаты және білім беру стандарты</span></a>
+        <a class="card" href="#b9"><span>9-бөлім. Тұтас педагогикалық үдеріс</span></a>
+        <a class="card" href="#b10"><span>10-бөлім. Дидактика оқыту теориясы ретінде</span></a>
+        <a class="card" href="#b11"><span>11-бөлім. Оқыту үдерісі және мұғалім мен оқушы іс-әрекеті</span></a>
+        <a class="card" href="#b12"><span>12-бөлім. Оқыту заңдылықтары мен принциптері</span></a>
+        <a class="card" href="#b13"><span>13-бөлім. Оқыту әдістері</span></a>
+        <a class="card" href="#b14"><span>14-бөлім. Оқытуды ұйымдастыру формалары және диагностика</span></a>
+        <a class="card" href="#b15"><span>15-бөлім. Тәрбие теориясы</span></a>
+        <a class="card" href="#b16"><span>16-бөлім. Тәрбие заңдылықтары, принциптері және мазмұны</span></a>
+        <a class="card" href="#b17"><span>17-бөлім. Тәрбие әдістері, құралдары және ұжымда тәрбиелеу</span></a>
+    </nav>
+
+<!-- БАЙЖАНОВА: 1-БӨЛІМ -->
+
+    <section class="section" id="b1" data-section="b1">
       <h2>1-бөлім. Педагогиканың жалпы негіздері</h2>
 
       <div class="meta">
@@ -229,7 +410,7 @@
     </section>
         <!-- БАЙЖАНОВА: 2-БӨЛІМ -->
 
-    <section class="section" data-section="b2">
+    <section class="section" id="b2" data-section="b2">
       <h2>2-бөлім. Педагогика ғылымы мен практикасының даму тарихы</h2>
 
       <div class="meta">
@@ -458,7 +639,7 @@
     </section>
         <!-- БАЙЖАНОВА: 3-БӨЛІМ -->
 
-    <section class="section" data-section="b3">
+    <section class="section" id="b3" data-section="b3">
       <h2>3-бөлім. Ұлттық педагогикалық ойлардың дамуы</h2>
 
       <div class="meta">
@@ -687,7 +868,7 @@
     </section>
         <!-- БАЙЖАНОВА: 4-БӨЛІМ -->
 
-    <section class="section" data-section="b4">
+    <section class="section" id="b4" data-section="b4">
       <h2>4-бөлім. Педагогика әдіснамасы және зерттеу әдістері</h2>
 
       <div class="meta">
@@ -930,7 +1111,7 @@
     </section>
         <!-- БАЙЖАНОВА: 5-БӨЛІМ -->
 
-    <section class="section" data-section="b5">
+    <section class="section" id="b5" data-section="b5">
       <h2>5-бөлім. Педагогикалық әдіснаманың философиялық негіздері</h2>
 
       <div class="meta">
@@ -1173,7 +1354,7 @@
     </section>
         <!-- БАЙЖАНОВА: 6-БӨЛІМ -->
 
-    <section class="section" data-section="b6">
+    <section class="section" id="b6" data-section="b6">
       <h2>6-бөлім. Тұлғаның дамуына әсер ететін факторлар және жас кезең ерекшеліктері</h2>
 
       <div class="meta">
@@ -1416,7 +1597,7 @@
     </section>
         <!-- БАЙЖАНОВА: 7-БӨЛІМ -->
 
-    <section class="section" data-section="b7">
+    <section class="section" id="b7" data-section="b7">
       <h2>7-бөлім. Әлеуметтік тәжірибені меңгеру және әлеуметтену</h2>
 
       <div class="meta">
@@ -1659,7 +1840,7 @@
     </section>
         <!-- БАЙЖАНОВА: 8-БӨЛІМ -->
 
-    <section class="section" data-section="b8">
+    <section class="section" id="b8" data-section="b8">
       <h2>8-бөлім. Тәрбие мақсаты және білім беру стандарты</h2>
 
       <div class="meta">
@@ -1902,7 +2083,7 @@
     </section>
         <!-- БАЙЖАНОВА: 9-БӨЛІМ -->
 
-    <section class="section" data-section="b9">
+    <section class="section" id="b9" data-section="b9">
       <h2>9-бөлім. Тұтас педагогикалық үдеріс</h2>
 
       <div class="meta">
@@ -2145,7 +2326,7 @@
     </section>
     <!-- БАЙЖАНОВА: 10-БӨЛІМ -->
 
-    <section class="section" data-section="b10">
+    <section class="section" id="b10" data-section="b10">
       <h2>10-бөлім. Дидактика оқыту теориясы ретінде</h2>
 
       <div class="meta">
@@ -2390,7 +2571,7 @@
 
     <!-- БАЙЖАНОВА: 11-БӨЛІМ -->
 
-    <section class="section" data-section="b11">
+    <section class="section" id="b11" data-section="b11">
       <h2>11-бөлім. Оқыту үдерісі және мұғалім мен оқушы іс-әрекеті</h2>
 
       <div class="meta">
@@ -2633,7 +2814,7 @@
     </section>
     <!-- БАЙЖАНОВА: 12-БӨЛІМ -->
 
-    <section class="section" data-section="b12">
+    <section class="section" id="b12" data-section="b12">
       <h2>12-бөлім. Оқыту заңдылықтары мен принциптері</h2>
 
       <div class="meta">
@@ -2808,7 +2989,7 @@
 
     <!-- БАЙЖАНОВА: 13-БӨЛІМ -->
 
-    <section class="section" data-section="b13">
+    <section class="section" id="b13" data-section="b13">
       <h2>13-бөлім. Оқыту әдістері</h2>
 
       <div class="meta">
@@ -2981,7 +3162,7 @@
     </section>
     <!-- БАЙЖАНОВА: 14-БӨЛІМ -->
 
-    <section class="section" data-section="b14">
+    <section class="section" id="b14" data-section="b14">
       <h2>14-бөлім. Оқытуды ұйымдастыру формалары және диагностика</h2>
 
       <div class="meta">
@@ -3156,7 +3337,7 @@
 
     <!-- БАЙЖАНОВА: 15-БӨЛІМ -->
 
-    <section class="section" data-section="b15">
+    <section class="section" id="b15" data-section="b15">
       <h2>15-бөлім. Тәрбие теориясы</h2>
 
       <div class="meta">
@@ -3329,7 +3510,7 @@
     </section>
     <!-- БАЙЖАНОВА: 16-БӨЛІМ -->
 
-    <section class="section" data-section="b16">
+    <section class="section" id="b16" data-section="b16">
       <h2>16-бөлім. Тәрбие заңдылықтары, принциптері және мазмұны</h2>
 
       <div class="meta">
@@ -3532,7 +3713,7 @@
 
     <!-- БАЙЖАНОВА: 17-БӨЛІМ -->
 
-    <section class="section" data-section="b17">
+    <section class="section" id="b17" data-section="b17">
       <h2>17-бөлім. Тәрбие әдістері, құралдары және ұжымда тәрбиелеу</h2>
 
       <div class="meta">
@@ -3731,11 +3912,14 @@
       <button onclick="checkSection('b17')">Нәтижені көрсету</button>
       <div class="result"></div>
     </section>
+
   </main>
 
   <script>
     function checkSection(sectionId) {
       const section = document.querySelector(`[data-section="${sectionId}"]`);
+      if (!section) return;
+
       const questions = section.querySelectorAll('.question');
       let score = 0;
 
@@ -3746,8 +3930,8 @@
 
         labels.forEach(label => {
           label.classList.remove('correct', 'wrong');
-
           const input = label.querySelector('input');
+          if (!input) return;
 
           if (input.value === correctAnswer) {
             label.classList.add('correct');
@@ -3769,14 +3953,11 @@
       });
 
       const result = section.querySelector('.result');
-      result.textContent = `Нәтиже: ${score} / ${questions.length}`;
-      result.style.display = 'block';
+      if (result) {
+        result.textContent = `Нәтиже: ${score} / ${questions.length}`;
+        result.style.display = 'block';
+      }
     }
   </script>
 </body>
 </html>
-
-
-
-
-    
